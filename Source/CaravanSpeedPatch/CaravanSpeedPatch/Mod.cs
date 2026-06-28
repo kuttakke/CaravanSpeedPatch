@@ -21,6 +21,9 @@ namespace KTK_CaravanSpeedPatch
         // speed multiplier for caravan speed
         public static float caravanSpeedMultiplier = 1.0f;
 
+        // minimum ticks per move to prevent pathfinding breakdown at very high speeds
+        public static int minTicksPerMove = 30;
+
         public override void ExposeData()
         {
             Scribe_Values.Look(ref enableCaravanSpeedPatch, "enableCaravanSpeedPatch", true);
@@ -28,6 +31,7 @@ namespace KTK_CaravanSpeedPatch
             Scribe_Values.Look(ref onlyPatchRideableAnimals, "onlyPatchRideableAnimals", true);
             Scribe_Values.Look(ref enableVehicleFrameworkModCaravanSpeed, "enableVehicleFrameworkModCaravanSpeed", false);
             Scribe_Values.Look(ref caravanSpeedMultiplier, "caravanSpeedMultiplier", 1.0f);
+            Scribe_Values.Look(ref minTicksPerMove, "minTicksPerMove", 30);
 
             base.ExposeData();
         }
@@ -45,6 +49,22 @@ namespace KTK_CaravanSpeedPatch
             float result = Widgets.HorizontalSlider(rect.RightPart(1f - 0.5f), val, min, max, roundTo: roundTo);
             l.Gap(l.verticalSpacing);
             val = result;
+        }
+
+        private static void DoIntSliderLabeled(Listing_Standard l, string label, ref int val, int min, int max, string tooltip = null)
+        {
+            Rect rect = l.GetRect(30f);
+            Text.Anchor = (TextAnchor)3;
+            Widgets.Label(rect.LeftPart(0.5f), label);
+            if (tooltip != null)
+            {
+                TooltipHandler.TipRegion(rect.LeftPart(0.5f), tooltip);
+            }
+            Text.Anchor = (TextAnchor)0;
+            float floatVal = val;
+            float result = Widgets.HorizontalSlider(rect.RightPart(1f - 0.5f), floatVal, min, max, roundTo: 1f);
+            val = Mathf.RoundToInt(result);
+            l.Gap(l.verticalSpacing);
         }
 
         public static bool IsVehicleFrameworkFinded()
@@ -74,6 +94,7 @@ namespace KTK_CaravanSpeedPatch
                 }
                 l.GapLine();
                 DoSliderLabeled(l, "KTK_CaravanSpeedPatch_CaravanSpeedMultiplier".Translate() + "  " + caravanSpeedMultiplier.ToString("F1"), ref caravanSpeedMultiplier, 0.1f, 5.0f, "KTK_CaravanSpeedPatch_CaravanSpeedMultiplier_Tooltip".Translate(), 0.1f);
+                DoIntSliderLabeled(l, "KTK_CaravanSpeedPatch_MinTicksPerMove".Translate() + "  " + minTicksPerMove, ref minTicksPerMove, 1, 100, "KTK_CaravanSpeedPatch_MinTicksPerMove_Tooltip".Translate());
                 l.GapLine();
 
                 if (l.ButtonText("KTK_CaravanSpeedPatch_ResetToDefault".Translate()))
@@ -91,6 +112,7 @@ namespace KTK_CaravanSpeedPatch
             onlyPatchRideableAnimals = true;
             enableVehicleFrameworkModCaravanSpeed = false;
             caravanSpeedMultiplier = 1.0f;
+            minTicksPerMove = 30;
         }
     }
 

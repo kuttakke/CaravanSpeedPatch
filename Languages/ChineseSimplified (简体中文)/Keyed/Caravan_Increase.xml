@@ -26,6 +26,8 @@
     <KTK_CaravanSpeedPatch_EnableVehicleFrameworkModCaravanSpeed>启用载具 Mod 的远行队速度修改</KTK_CaravanSpeedPatch_EnableVehicleFrameworkModCaravanSpeed>
     <KTK_CaravanSpeedPatch_CaravanSpeedMultiplier>速度缩放因子（越小越快）</KTK_CaravanSpeedPatch_CaravanSpeedMultiplier>
     <KTK_CaravanSpeedPatch_CaravanSpeedMultiplier_Tooltip>与速度加成相乘，值越小速度越快。例如 0.5 表示加倍，2.0 表示减半。若原速度无提升，此倍数不会生效。</KTK_CaravanSpeedPatch_CaravanSpeedMultiplier_Tooltip>
+    <KTK_CaravanSpeedPatch_MinTicksPerMove>最小每格Tick数</KTK_CaravanSpeedPatch_MinTicksPerMove>
+    <KTK_CaravanSpeedPatch_MinTicksPerMove_Tooltip>防止速度过快时寻路异常（蚊香步）。远行队速度不会使每格tick数低于此值。如出现螺旋行走，请调大此值。</KTK_CaravanSpeedPatch_MinTicksPerMove_Tooltip>
     <KTK_CaravanSpeedPatch_ResetToDefault>重置设置</KTK_CaravanSpeedPatch_ResetToDefault>
 
     <!-- Patch -->

@@ -9,6 +9,8 @@
     <KTK_CaravanSpeedPatch_EnableVehicleFrameworkModCaravanSpeed>Enable Vehicle Mod Caravan Speed Support</KTK_CaravanSpeedPatch_EnableVehicleFrameworkModCaravanSpeed>
     <KTK_CaravanSpeedPatch_CaravanSpeedMultiplier>Speed Scaling Factor (Lower = Faster)</KTK_CaravanSpeedPatch_CaravanSpeedMultiplier>
     <KTK_CaravanSpeedPatch_CaravanSpeedMultiplier_Tooltip>Multiplies the speed bonus. Lower values mean faster travel. For example: 0.5 = double speed, 2.0 = half. If there is no original boost, this has no effect.</KTK_CaravanSpeedPatch_CaravanSpeedMultiplier_Tooltip>
+    <KTK_CaravanSpeedPatch_MinTicksPerMove>Minimum Ticks Per Move</KTK_CaravanSpeedPatch_MinTicksPerMove>
+    <KTK_CaravanSpeedPatch_MinTicksPerMove_Tooltip>Prevents pathfinding issues at very high speeds. Caravan speed will not reduce ticks per move below this value. Increase if caravans walk in spirals.</KTK_CaravanSpeedPatch_MinTicksPerMove_Tooltip>
     <KTK_CaravanSpeedPatch_ResetToDefault>Reset to Default</KTK_CaravanSpeedPatch_ResetToDefault>
 
     <!-- Patch -->

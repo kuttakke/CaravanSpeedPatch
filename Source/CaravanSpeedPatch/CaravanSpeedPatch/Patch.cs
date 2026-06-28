@@ -87,7 +87,7 @@ namespace KTK_CaravanSpeedPatch
                 return;
             }
             float speedFactorWithMultiplier = speedFactor * CaravanSpeedPatchSettings.caravanSpeedMultiplier;
-            __result = Mathf.RoundToInt(__result * speedFactorWithMultiplier);
+            __result = Mathf.Max(Mathf.RoundToInt(__result * speedFactorWithMultiplier), CaravanSpeedPatchSettings.minTicksPerMove);
 
             float increaseHumanlike = ((1 / humanlikeMoveSpeedFactor) - 1) * 100;
             explanation?.AppendLine("  " + "KTK_CaravanSpeedPatch_HumanlikeSpeedIncreased".Translate((increaseHumanlike).ToString("F1")));
@@ -164,7 +164,7 @@ namespace KTK_CaravanSpeedPatch
                 return;
             }
             float speedFactorWithMultiplier = speedFactor * CaravanSpeedPatchSettings.caravanSpeedMultiplier;
-            __result = Mathf.RoundToInt(__result * speedFactorWithMultiplier);
+            __result = Mathf.Max(Mathf.RoundToInt(__result * speedFactorWithMultiplier), CaravanSpeedPatchSettings.minTicksPerMove);
 
             float increaseHumanlike = ((1 / humanlikeMoveSpeedFactor) - 1) * 100;
             explanation?.AppendLine("  " + "KTK_CaravanSpeedPatch_HumanlikeSpeedIncreased".Translate((increaseHumanlike).ToString("F1")));
