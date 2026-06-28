@@ -19,6 +19,7 @@
     <KTK_CaravanSpeedPatch_HumanlikeSpeedIncreased>Colonist speed increased by: {0}%</KTK_CaravanSpeedPatch_HumanlikeSpeedIncreased>
     <KTK_CaravanSpeedPatch_AnimalSpeedIncreased>Animal speed increased by: {0}%</KTK_CaravanSpeedPatch_AnimalSpeedIncreased>
     <KTK_CaravanSpeedPatch_CaravanSpeedMultiplierE>Speed multiplier: {0}</KTK_CaravanSpeedPatch_CaravanSpeedMultiplierE>
+    <KTK_CaravanSpeedPatch_MinTicksClamped>Ticks per move clamped to minimum: {1} (calculated: {0})</KTK_CaravanSpeedPatch_MinTicksClamped>
     <KTK_CaravanSpeedPatch_CaravanSpeedIncreased>Final caravan speed increased by: {0}%</KTK_CaravanSpeedPatch_CaravanSpeedIncreased>
 
 

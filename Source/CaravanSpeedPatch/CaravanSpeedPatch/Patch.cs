@@ -87,7 +87,12 @@ namespace KTK_CaravanSpeedPatch
                 return;
             }
             float speedFactorWithMultiplier = speedFactor * CaravanSpeedPatchSettings.caravanSpeedMultiplier;
-            __result = Mathf.Max(Mathf.RoundToInt(__result * speedFactorWithMultiplier), CaravanSpeedPatchSettings.minTicksPerMove);
+            int calculatedResult = Mathf.RoundToInt(__result * speedFactorWithMultiplier);
+            if (calculatedResult < CaravanSpeedPatchSettings.minTicksPerMove)
+            {
+                explanation?.AppendLine("  " + "KTK_CaravanSpeedPatch_MinTicksClamped".Translate(calculatedResult.ToString(), CaravanSpeedPatchSettings.minTicksPerMove.ToString()));
+            }
+            __result = Mathf.Max(calculatedResult, CaravanSpeedPatchSettings.minTicksPerMove);
 
             float increaseHumanlike = ((1 / humanlikeMoveSpeedFactor) - 1) * 100;
             explanation?.AppendLine("  " + "KTK_CaravanSpeedPatch_HumanlikeSpeedIncreased".Translate((increaseHumanlike).ToString("F1")));
@@ -164,7 +169,12 @@ namespace KTK_CaravanSpeedPatch
                 return;
             }
             float speedFactorWithMultiplier = speedFactor * CaravanSpeedPatchSettings.caravanSpeedMultiplier;
-            __result = Mathf.Max(Mathf.RoundToInt(__result * speedFactorWithMultiplier), CaravanSpeedPatchSettings.minTicksPerMove);
+            int calculatedResult = Mathf.RoundToInt(__result * speedFactorWithMultiplier);
+            if (calculatedResult < CaravanSpeedPatchSettings.minTicksPerMove)
+            {
+                explanation?.AppendLine("  " + "KTK_CaravanSpeedPatch_MinTicksClamped".Translate(calculatedResult.ToString(), CaravanSpeedPatchSettings.minTicksPerMove.ToString()));
+            }
+            __result = Mathf.Max(calculatedResult, CaravanSpeedPatchSettings.minTicksPerMove);
 
             float increaseHumanlike = ((1 / humanlikeMoveSpeedFactor) - 1) * 100;
             explanation?.AppendLine("  " + "KTK_CaravanSpeedPatch_HumanlikeSpeedIncreased".Translate((increaseHumanlike).ToString("F1")));

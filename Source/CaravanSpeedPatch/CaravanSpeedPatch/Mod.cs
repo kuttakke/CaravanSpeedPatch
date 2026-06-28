@@ -22,7 +22,7 @@ namespace KTK_CaravanSpeedPatch
         public static float caravanSpeedMultiplier = 1.0f;
 
         // minimum ticks per move to prevent pathfinding breakdown at very high speeds
-        public static int minTicksPerMove = 30;
+        public static int minTicksPerMove = 5;
 
         public override void ExposeData()
         {
@@ -31,7 +31,7 @@ namespace KTK_CaravanSpeedPatch
             Scribe_Values.Look(ref onlyPatchRideableAnimals, "onlyPatchRideableAnimals", true);
             Scribe_Values.Look(ref enableVehicleFrameworkModCaravanSpeed, "enableVehicleFrameworkModCaravanSpeed", false);
             Scribe_Values.Look(ref caravanSpeedMultiplier, "caravanSpeedMultiplier", 1.0f);
-            Scribe_Values.Look(ref minTicksPerMove, "minTicksPerMove", 30);
+            Scribe_Values.Look(ref minTicksPerMove, "minTicksPerMove", 5);
 
             base.ExposeData();
         }
@@ -112,7 +112,7 @@ namespace KTK_CaravanSpeedPatch
             onlyPatchRideableAnimals = true;
             enableVehicleFrameworkModCaravanSpeed = false;
             caravanSpeedMultiplier = 1.0f;
-            minTicksPerMove = 30;
+            minTicksPerMove = 5;
         }
     }
 

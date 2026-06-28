@@ -36,6 +36,7 @@
     <KTK_CaravanSpeedPatch_HumanlikeSpeedIncreased>成员速度提升：{0}%</KTK_CaravanSpeedPatch_HumanlikeSpeedIncreased>
     <KTK_CaravanSpeedPatch_AnimalSpeedIncreased>动物速度提升：{0}%</KTK_CaravanSpeedPatch_AnimalSpeedIncreased>
     <KTK_CaravanSpeedPatch_CaravanSpeedMultiplierE>加成倍数：{0}</KTK_CaravanSpeedPatch_CaravanSpeedMultiplierE>
+    <KTK_CaravanSpeedPatch_MinTicksClamped>每格tick数已限制到最小值: {1}（原计算值: {0}）</KTK_CaravanSpeedPatch_MinTicksClamped>
     <KTK_CaravanSpeedPatch_CaravanSpeedIncreased>远行队最终速度提升：{0}%</KTK_CaravanSpeedPatch_CaravanSpeedIncreased>
 
 </LanguageData>
