@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+    <!-- Mod -->
+    <KTK_CaravanSpeedPatch_SettingsCategory>Caravan Speed Patch</KTK_CaravanSpeedPatch_SettingsCategory>
+    <KTK_CaravanSpeedPatch_EnableCaravanSpeedPatch>Enable Caravan Speed Adjustment</KTK_CaravanSpeedPatch_EnableCaravanSpeedPatch>
+    <KTK_CaravanSpeedPatch_EnableAnimeSpeed>Enable Animal Speed Adjustment</KTK_CaravanSpeedPatch_EnableAnimeSpeed>
+    <KTK_CaravanSpeedPatch_OnlyPatchRideableAnimals>Only Include Rideable Animals</KTK_CaravanSpeedPatch_OnlyPatchRideableAnimals>
+    <KTK_CaravanSpeedPatch_EnableVehicleFrameworkModCaravanSpeed>Enable Vehicle Mod Caravan Speed Support</KTK_CaravanSpeedPatch_EnableVehicleFrameworkModCaravanSpeed>
+    <KTK_CaravanSpeedPatch_CaravanSpeedMultiplier>Speed Scaling Factor (Lower = Faster)</KTK_CaravanSpeedPatch_CaravanSpeedMultiplier>
+    <KTK_CaravanSpeedPatch_CaravanSpeedMultiplier_Tooltip>Multiplies the speed bonus. Lower values mean faster travel. For example: 0.5 = double speed, 2.0 = half. If there is no original boost, this has no effect.</KTK_CaravanSpeedPatch_CaravanSpeedMultiplier_Tooltip>
+    <KTK_CaravanSpeedPatch_ResetToDefault>Reset to Default</KTK_CaravanSpeedPatch_ResetToDefault>
+
+    <!-- Patch -->
+    <KTK_CaravanSpeedPatch_ExplanationStart>Caravan Speed Patch:</KTK_CaravanSpeedPatch_ExplanationStart>
+    <KTK_CaravanSpeedPatch_CaravanSpeedNotChanged>No effect because speed bonus not exists</KTK_CaravanSpeedPatch_CaravanSpeedNotChanged>
+    <KTK_CaravanSpeedPatch_HumanlikeSpeedIncreased>Colonist speed increased by: {0}%</KTK_CaravanSpeedPatch_HumanlikeSpeedIncreased>
+    <KTK_CaravanSpeedPatch_AnimalSpeedIncreased>Animal speed increased by: {0}%</KTK_CaravanSpeedPatch_AnimalSpeedIncreased>
+    <KTK_CaravanSpeedPatch_CaravanSpeedMultiplierE>Speed multiplier: {0}</KTK_CaravanSpeedPatch_CaravanSpeedMultiplierE>
+    <KTK_CaravanSpeedPatch_CaravanSpeedIncreased>Final caravan speed increased by: {0}%</KTK_CaravanSpeedPatch_CaravanSpeedIncreased>
+
+
+</LanguageData>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+    <!-- Mod -->
+    <!-- <KTK_CaravanSpeedPatch_EnableCaravanSpeedPatch>启用远行队速度修改</KTK_CaravanSpeedPatch_EnableCaravanSpeedPatch>
+    <KTK_CaravanSpeedPatch_EnableAnimeSpeed>启用动物速度修改</KTK_CaravanSpeedPatch_EnableAnimeSpeed>
+    <KTK_CaravanSpeedPatch_OnlyPatchRideableAnimals>仅计算可骑乘动物</KTK_CaravanSpeedPatch_OnlyPatchRideableAnimals>
+    <KTK_CaravanSpeedPatch_EnableVehicleFrameworkModCaravanSpeed>启动载具MOD远行速度修改</KTK_CaravanSpeedPatch_EnableVehicleFrameworkModCaravanSpeed>
+    <KTK_CaravanSpeedPatch_CaravanSpeedMultiplier>最终加成倍数</KTK_CaravanSpeedPatch_CaravanSpeedMultiplier>
+    <KTK_CaravanSpeedPatch_CaravanSpeedMultiplier_Tooltip>对加成后的速度再进行加倍或缩小，若原速度没有任何提升，该倍数同样不会生效</KTK_CaravanSpeedPatch_CaravanSpeedMultiplier_Tooltip>
+    <KTK_CaravanSpeedPatch_ResetToDefault>重置设置</KTK_CaravanSpeedPatch_ResetToDefault> -->
+
+    <!-- Patch -->
+    <!-- <KTK_CaravanSpeedPatch_ExplanationStart>远行队速度Patch：</KTK_CaravanSpeedPatch_ExplanationStart>
+    <KTK_CaravanSpeedPatch_CaravanSpeedNotChanged>由于加成小于1，不生效</KTK_CaravanSpeedPatch_CaravanSpeedNotChanged>
+    <KTK_CaravanSpeedPatch_HumanlikeSpeedIncreased>人类速度提升： {0}%</KTK_CaravanSpeedPatch_HumanlikeSpeedIncreased>
+    <KTK_CaravanSpeedPatch_AnimalSpeedIncreased>动物速度提升： {0}%</KTK_CaravanSpeedPatch_AnimalSpeedIncreased>
+    <KTK_CaravanSpeedPatch_CaravanSpeedMultiplier>加成倍数：{}</KTK_CaravanSpeedPatch_CaravanSpeedMultiplier>
+    <KTK_CaravanSpeedPatch_CaravanSpeedIncreased>远行队最终速度提升： {0}%</KTK_CaravanSpeedPatch_CaravanSpeedIncreased> -->
+
+    <!-- Mod -->
+    <KTK_CaravanSpeedPatch_SettingsCategory>远行队速度Patch</KTK_CaravanSpeedPatch_SettingsCategory>
+    <KTK_CaravanSpeedPatch_EnableCaravanSpeedPatch>启用远行队速度修改</KTK_CaravanSpeedPatch_EnableCaravanSpeedPatch>
+    <KTK_CaravanSpeedPatch_EnableAnimeSpeed>启用动物速度修改</KTK_CaravanSpeedPatch_EnableAnimeSpeed>
+    <KTK_CaravanSpeedPatch_OnlyPatchRideableAnimals>仅计算可骑乘动物</KTK_CaravanSpeedPatch_OnlyPatchRideableAnimals>
+    <KTK_CaravanSpeedPatch_EnableVehicleFrameworkModCaravanSpeed>启用载具 Mod 的远行队速度修改</KTK_CaravanSpeedPatch_EnableVehicleFrameworkModCaravanSpeed>
+    <KTK_CaravanSpeedPatch_CaravanSpeedMultiplier>速度缩放因子（越小越快）</KTK_CaravanSpeedPatch_CaravanSpeedMultiplier>
+    <KTK_CaravanSpeedPatch_CaravanSpeedMultiplier_Tooltip>与速度加成相乘，值越小速度越快。例如 0.5 表示加倍，2.0 表示减半。若原速度无提升，此倍数不会生效。</KTK_CaravanSpeedPatch_CaravanSpeedMultiplier_Tooltip>
+    <KTK_CaravanSpeedPatch_ResetToDefault>重置设置</KTK_CaravanSpeedPatch_ResetToDefault>
+
+    <!-- Patch -->
+    <KTK_CaravanSpeedPatch_ExplanationStart>远行队速度Patch说明：</KTK_CaravanSpeedPatch_ExplanationStart>
+    <KTK_CaravanSpeedPatch_CaravanSpeedNotChanged>由于不存在移动速度加成，不生效</KTK_CaravanSpeedPatch_CaravanSpeedNotChanged>
+    <KTK_CaravanSpeedPatch_HumanlikeSpeedIncreased>成员速度提升：{0}%</KTK_CaravanSpeedPatch_HumanlikeSpeedIncreased>
+    <KTK_CaravanSpeedPatch_AnimalSpeedIncreased>动物速度提升：{0}%</KTK_CaravanSpeedPatch_AnimalSpeedIncreased>
+    <KTK_CaravanSpeedPatch_CaravanSpeedMultiplierE>加成倍数：{0}</KTK_CaravanSpeedPatch_CaravanSpeedMultiplierE>
+    <KTK_CaravanSpeedPatch_CaravanSpeedIncreased>远行队最终速度提升：{0}%</KTK_CaravanSpeedPatch_CaravanSpeedIncreased>
+
+</LanguageData>

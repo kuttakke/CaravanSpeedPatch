@@ -1,0 +1,18 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.userprefs
+
+# Build outputs (under Source/)
+Source/**/bin/
+Source/**/obj/
+
+# OS files
+Thumbs.db
+Desktop.ini
+
+# RimWorld
+*.log
