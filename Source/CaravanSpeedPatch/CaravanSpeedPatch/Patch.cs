@@ -1,4 +1,4 @@
-﻿using HarmonyLib;
+using HarmonyLib;
 using RimWorld;
 using RimWorld.Planet;
 using System;
@@ -45,7 +45,7 @@ namespace KTK_CaravanSpeedPatch
             if (caravan == null || caravan.PawnsListForReading == null)
                 return;
 
-            if (__result == 1)
+            if (__result <= 1)
             {
                 return;
             }
@@ -64,9 +64,9 @@ namespace KTK_CaravanSpeedPatch
                 if (pawn.RaceProps.Animal)
                 {
                     if (!CaravanSpeedPatchSettings.enableAnimeSpeed)
-                        return;
+                        continue;
                     if (CaravanSpeedPatchSettings.onlyPatchRideableAnimals && !pawn.IsCaravanRideable())
-                        return;
+                        continue;
                     animalMoveSpeedFactorList.Add(GetCaravanSpeedFactorByPawnMoveSpeed(pawn));
                     continue;
                 }
@@ -127,7 +127,7 @@ namespace KTK_CaravanSpeedPatch
             if (caravan == null || caravan.PawnsListForReading == null)
                 return;
 
-            if (__result == 1)
+            if (__result <= 1)
             {
                 return;
             }
@@ -146,9 +146,9 @@ namespace KTK_CaravanSpeedPatch
                 if (pawn.RaceProps.Animal)
                 {
                     if (!CaravanSpeedPatchSettings.enableAnimeSpeed)
-                        return;
+                        continue;
                     if (CaravanSpeedPatchSettings.onlyPatchRideableAnimals && !pawn.IsCaravanRideable())
-                        return;
+                        continue;
                     animalMoveSpeedFactorList.Add(GetCaravanSpeedFactorByPawnMoveSpeed(pawn));
                     continue;
                 }

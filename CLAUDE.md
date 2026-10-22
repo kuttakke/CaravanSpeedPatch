@@ -8,7 +8,7 @@ A RimWorld mod that makes caravan (world map travel) speed scale with the averag
 
 - **Author**: Kutake
 - **Package ID**: `Kutake.CaravanSpeedPatch`
-- **Supported versions**: RimWorld 1.5, 1.6
+- **Supported versions**: RimWorld 1.5, 1.6, 1.7
 - **Dependency**: `brrainz.harmony` (Harmony patching library)
 
 ## Build
