@@ -25,9 +25,13 @@
     <KTK_CaravanSpeedPatch_OnlyPatchRideableAnimals>仅计算可骑乘动物</KTK_CaravanSpeedPatch_OnlyPatchRideableAnimals>
     <KTK_CaravanSpeedPatch_EnableVehicleFrameworkModCaravanSpeed>启用载具 Mod 的远行队速度修改</KTK_CaravanSpeedPatch_EnableVehicleFrameworkModCaravanSpeed>
     <KTK_CaravanSpeedPatch_CaravanSpeedMultiplier>远行队速度倍率：{0}（{1}，缩放因子 {2}）</KTK_CaravanSpeedPatch_CaravanSpeedMultiplier>
-    <KTK_CaravanSpeedPatch_CaravanSpeedMultiplier_Tooltip>在角色移速加成的基础上再进行倍率调整（左快右慢）。例如：0.5 = 200%（2倍速），1.0 = 100%（原加成），2.0 = 50%（减半）。若角色本身没有任何移速提升，此项不会生效。</KTK_CaravanSpeedPatch_CaravanSpeedMultiplier_Tooltip>
+    <KTK_CaravanSpeedPatch_CaravanSpeedMultiplier_Tooltip>在角色移速加成的基础上再进行对数倍率调整（右快左慢），范围 0.2x（20%）至 1000x（100000%），1x 为原加成。若角色本身没有任何移速提升，此项不会生效。</KTK_CaravanSpeedPatch_CaravanSpeedMultiplier_Tooltip>
     <KTK_CaravanSpeedPatch_MinTicksPerMove>最高速度上限：{0} 格/天（{1} tick/格）</KTK_CaravanSpeedPatch_MinTicksPerMove>
     <KTK_CaravanSpeedPatch_MinTicksPerMove_Tooltip>限制远行队最快不超过此速度（1 tick/格 即 60000 格/天，为原版引擎上限）。本 Mod 已内置寻路保护，即使设为 1 也不会出现蚊香步或无法规划路线。</KTK_CaravanSpeedPatch_MinTicksPerMove_Tooltip>
+    <KTK_CaravanSpeedPatch_AllowUncappedSpeed>突破 60000 格/天上限（单 Tick 多格推进）</KTK_CaravanSpeedPatch_AllowUncappedSpeed>
+    <KTK_CaravanSpeedPatch_AllowUncappedSpeed_Tooltip>开启后，当速度超过 60000 格/天时允许在单次 Tick 内连续推进多格。默认关闭，仅建议高上限 Mod 环境使用。</KTK_CaravanSpeedPatch_AllowUncappedSpeed_Tooltip>
+    <KTK_CaravanSpeedPatch_MaxTilesPerTick>单 Tick 最大推进：{0} 格/tick（最高 {1} 格/天）</KTK_CaravanSpeedPatch_MaxTilesPerTick>
+    <KTK_CaravanSpeedPatch_MaxTilesPerTick_Tooltip>开启突破上限后，限制单次 Tick 最多推进的格数，防止极端数值导致游戏卡顿。</KTK_CaravanSpeedPatch_MaxTilesPerTick_Tooltip>
     <KTK_CaravanSpeedPatch_ResetToDefault>重置设置</KTK_CaravanSpeedPatch_ResetToDefault>
 
     <!-- Patch -->
@@ -35,8 +39,9 @@
     <KTK_CaravanSpeedPatch_CaravanSpeedNotChanged>由于不存在移动速度加成，不生效</KTK_CaravanSpeedPatch_CaravanSpeedNotChanged>
     <KTK_CaravanSpeedPatch_HumanlikeSpeedIncreased>成员速度提升：{0}%</KTK_CaravanSpeedPatch_HumanlikeSpeedIncreased>
     <KTK_CaravanSpeedPatch_AnimalSpeedIncreased>动物速度提升：{0}%</KTK_CaravanSpeedPatch_AnimalSpeedIncreased>
-    <KTK_CaravanSpeedPatch_CaravanSpeedMultiplierE>加成倍数：{0}</KTK_CaravanSpeedPatch_CaravanSpeedMultiplierE>
-    <KTK_CaravanSpeedPatch_MinTicksClamped>每格tick数已限制到最小值: {1}（原计算值: {0}）</KTK_CaravanSpeedPatch_MinTicksClamped>
-    <KTK_CaravanSpeedPatch_CaravanSpeedIncreased>远行队最终速度提升：{0}%</KTK_CaravanSpeedPatch_CaravanSpeedIncreased>
+    <KTK_CaravanSpeedPatch_CaravanSpeedMultiplierE>速度倍率：{0}（{1}，缩放因子 {2}）</KTK_CaravanSpeedPatch_CaravanSpeedMultiplierE>
+    <KTK_CaravanSpeedPatch_MinTicksClamped>速度已限制到上限：{1} 格/天（原计算约 {0} 格/天，可在设置中开启“突破上限”）</KTK_CaravanSpeedPatch_MinTicksClamped>
+    <KTK_CaravanSpeedPatch_MaxTilesClamped>速度已限制到上限：{1} 格/天（原计算值：{0} 格/天）</KTK_CaravanSpeedPatch_MaxTilesClamped>
+    <KTK_CaravanSpeedPatch_CaravanSpeedIncreased>远行队实际速度提升：{0}%（约 {1} 格/天）</KTK_CaravanSpeedPatch_CaravanSpeedIncreased>
 
 </LanguageData>

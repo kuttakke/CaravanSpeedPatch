@@ -8,9 +8,13 @@
     <KTK_CaravanSpeedPatch_OnlyPatchRideableAnimals>Only Include Rideable Animals</KTK_CaravanSpeedPatch_OnlyPatchRideableAnimals>
     <KTK_CaravanSpeedPatch_EnableVehicleFrameworkModCaravanSpeed>Enable Vehicle Mod Caravan Speed Support</KTK_CaravanSpeedPatch_EnableVehicleFrameworkModCaravanSpeed>
     <KTK_CaravanSpeedPatch_CaravanSpeedMultiplier>Caravan Speed Multiplier: {0} ({1}, factor {2})</KTK_CaravanSpeedPatch_CaravanSpeedMultiplier>
-    <KTK_CaravanSpeedPatch_CaravanSpeedMultiplier_Tooltip>Scales the caravan speed bonus (left = faster, right = slower). Examples: 0.5 = 200% (2x speed), 1.0 = 100% (unchanged), 2.0 = 50% (halved). Has no effect if there is no base speed bonus.</KTK_CaravanSpeedPatch_CaravanSpeedMultiplier_Tooltip>
+    <KTK_CaravanSpeedPatch_CaravanSpeedMultiplier_Tooltip>Scales the caravan speed bonus on a logarithmic scale from 0.2x (20%) to 1000x (100000%). Right = faster, left = slower, 1x = unchanged. Has no effect if there is no base speed bonus.</KTK_CaravanSpeedPatch_CaravanSpeedMultiplier_Tooltip>
     <KTK_CaravanSpeedPatch_MinTicksPerMove>Max Speed Cap: {0} tiles/day ({1} ticks/tile)</KTK_CaravanSpeedPatch_MinTicksPerMove>
     <KTK_CaravanSpeedPatch_MinTicksPerMove_Tooltip>Caps maximum caravan speed (1 tick/tile = 60000 tiles/day, the vanilla engine limit). Pathfinding is protected by this mod, so even 1 tick/tile will not cause spiral walking or routing failures.</KTK_CaravanSpeedPatch_MinTicksPerMove_Tooltip>
+    <KTK_CaravanSpeedPatch_AllowUncappedSpeed>Uncap Speed Beyond 60,000 Tiles/Day (Multi-Tile/Tick)</KTK_CaravanSpeedPatch_AllowUncappedSpeed>
+    <KTK_CaravanSpeedPatch_AllowUncappedSpeed_Tooltip>Allows caravans to advance multiple tiles per tick when speed exceeds 60,000 tiles/day. Disabled by default; enable only for extreme modded speed setups.</KTK_CaravanSpeedPatch_AllowUncappedSpeed_Tooltip>
+    <KTK_CaravanSpeedPatch_MaxTilesPerTick>Max Tiles Per Tick: {0} (up to {1} tiles/day)</KTK_CaravanSpeedPatch_MaxTilesPerTick>
+    <KTK_CaravanSpeedPatch_MaxTilesPerTick_Tooltip>Safety cap on how many tiles a caravan can advance in a single tick when uncapped speed is enabled, preventing freezes at extreme speeds.</KTK_CaravanSpeedPatch_MaxTilesPerTick_Tooltip>
     <KTK_CaravanSpeedPatch_ResetToDefault>Reset to Default</KTK_CaravanSpeedPatch_ResetToDefault>
 
     <!-- Patch -->
@@ -18,9 +22,10 @@
     <KTK_CaravanSpeedPatch_CaravanSpeedNotChanged>No effect because speed bonus not exists</KTK_CaravanSpeedPatch_CaravanSpeedNotChanged>
     <KTK_CaravanSpeedPatch_HumanlikeSpeedIncreased>Colonist speed increased by: {0}%</KTK_CaravanSpeedPatch_HumanlikeSpeedIncreased>
     <KTK_CaravanSpeedPatch_AnimalSpeedIncreased>Animal speed increased by: {0}%</KTK_CaravanSpeedPatch_AnimalSpeedIncreased>
-    <KTK_CaravanSpeedPatch_CaravanSpeedMultiplierE>Speed multiplier: {0}</KTK_CaravanSpeedPatch_CaravanSpeedMultiplierE>
-    <KTK_CaravanSpeedPatch_MinTicksClamped>Ticks per move clamped to minimum: {1} (calculated: {0})</KTK_CaravanSpeedPatch_MinTicksClamped>
-    <KTK_CaravanSpeedPatch_CaravanSpeedIncreased>Final caravan speed increased by: {0}%</KTK_CaravanSpeedPatch_CaravanSpeedIncreased>
+    <KTK_CaravanSpeedPatch_CaravanSpeedMultiplierE>Speed multiplier: {0} ({1}, factor {2})</KTK_CaravanSpeedPatch_CaravanSpeedMultiplierE>
+    <KTK_CaravanSpeedPatch_MinTicksClamped>Speed clamped to cap: {1} tiles/day (calculated: ~{0} tiles/day; enable Uncap Speed in settings to exceed)</KTK_CaravanSpeedPatch_MinTicksClamped>
+    <KTK_CaravanSpeedPatch_MaxTilesClamped>Speed clamped to cap: {1} tiles/day (calculated: {0} tiles/day)</KTK_CaravanSpeedPatch_MaxTilesClamped>
+    <KTK_CaravanSpeedPatch_CaravanSpeedIncreased>Actual caravan speed increased by: {0}% (~{1} tiles/day)</KTK_CaravanSpeedPatch_CaravanSpeedIncreased>
 
 
 </LanguageData>
