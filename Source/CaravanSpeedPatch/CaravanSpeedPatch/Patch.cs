@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using System.Reflection.Emit;
 using System.Text;
 using UnityEngine;
 using Verse;
@@ -31,7 +32,20 @@ namespace KTK_CaravanSpeedPatch
                 }
 
             }
-               harmony.PatchAll();
+            Type worldPathingType = AccessTools.TypeByName("RimWorld.Planet.WorldPathing")
+                ?? AccessTools.TypeByName("RimWorld.Planet.WorldPathFinder");
+            if (worldPathingType != null)
+            {
+                MethodInfo findPathMethod = AccessTools.Method(worldPathingType, "FindPath");
+                if (findPathMethod != null)
+                {
+                    harmony.Patch(
+                        original: findPathMethod,
+                        transpiler: new HarmonyMethod(typeof(WorldPathing_FindPath_Patch), nameof(WorldPathing_FindPath_Patch.Transpiler))
+                    );
+                }
+            }
+            harmony.PatchAll();
         }
     }
 
@@ -45,7 +59,7 @@ namespace KTK_CaravanSpeedPatch
             if (caravan == null || caravan.PawnsListForReading == null)
                 return;
 
-            if (__result <= 1)
+            if (__result <= 0)
             {
                 return;
             }
@@ -127,7 +141,7 @@ namespace KTK_CaravanSpeedPatch
             if (caravan == null || caravan.PawnsListForReading == null)
                 return;
 
-            if (__result <= 1)
+            if (__result <= 0)
             {
                 return;
             }
@@ -197,6 +211,30 @@ namespace KTK_CaravanSpeedPatch
                 return 1f;
             }
             return baseSpeed / nowSpeed;
+        }
+    }
+
+    public static class WorldPathing_FindPath_Patch
+    {
+        private static readonly MethodInfo TicksPerMoveGetter = AccessTools.PropertyGetter(typeof(Caravan), nameof(Caravan.TicksPerMove));
+        private static readonly MethodInfo ClampMethod = AccessTools.Method(typeof(WorldPathing_FindPath_Patch), nameof(ClampPathfindingTicksPerMove));
+
+        public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
+        {
+            foreach (CodeInstruction instruction in instructions)
+            {
+                yield return instruction;
+                if (instruction.Calls(TicksPerMoveGetter))
+                {
+                    yield return new CodeInstruction(OpCodes.Call, ClampMethod);
+                }
+            }
+        }
+
+        // Keep A* edge costs large enough to prevent integer truncation to 0 and spiral walking at extreme speeds
+        public static int ClampPathfindingTicksPerMove(int ticksPerMove)
+        {
+            return Mathf.Max(ticksPerMove, 1000);
         }
     }
 
