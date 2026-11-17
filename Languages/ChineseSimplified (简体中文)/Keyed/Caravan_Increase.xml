@@ -24,10 +24,10 @@
     <KTK_CaravanSpeedPatch_EnableAnimeSpeed>启用动物速度修改</KTK_CaravanSpeedPatch_EnableAnimeSpeed>
     <KTK_CaravanSpeedPatch_OnlyPatchRideableAnimals>仅计算可骑乘动物</KTK_CaravanSpeedPatch_OnlyPatchRideableAnimals>
     <KTK_CaravanSpeedPatch_EnableVehicleFrameworkModCaravanSpeed>启用载具 Mod 的远行队速度修改</KTK_CaravanSpeedPatch_EnableVehicleFrameworkModCaravanSpeed>
-    <KTK_CaravanSpeedPatch_CaravanSpeedMultiplier>速度缩放因子（越小越快）</KTK_CaravanSpeedPatch_CaravanSpeedMultiplier>
-    <KTK_CaravanSpeedPatch_CaravanSpeedMultiplier_Tooltip>与速度加成相乘，值越小速度越快。例如 0.5 表示加倍，2.0 表示减半。若原速度无提升，此倍数不会生效。</KTK_CaravanSpeedPatch_CaravanSpeedMultiplier_Tooltip>
-    <KTK_CaravanSpeedPatch_MinTicksPerMove>最小每格Tick数</KTK_CaravanSpeedPatch_MinTicksPerMove>
-    <KTK_CaravanSpeedPatch_MinTicksPerMove_Tooltip>防止速度过快时寻路异常（蚊香步）。远行队速度不会使每格tick数低于此值。如出现螺旋行走，请调大此值。</KTK_CaravanSpeedPatch_MinTicksPerMove_Tooltip>
+    <KTK_CaravanSpeedPatch_CaravanSpeedMultiplier>远行队速度倍率：{0}（{1}，缩放因子 {2}）</KTK_CaravanSpeedPatch_CaravanSpeedMultiplier>
+    <KTK_CaravanSpeedPatch_CaravanSpeedMultiplier_Tooltip>在角色移速加成的基础上再进行倍率调整（左快右慢）。例如：0.5 = 200%（2倍速），1.0 = 100%（原加成），2.0 = 50%（减半）。若角色本身没有任何移速提升，此项不会生效。</KTK_CaravanSpeedPatch_CaravanSpeedMultiplier_Tooltip>
+    <KTK_CaravanSpeedPatch_MinTicksPerMove>最高速度上限：{0} 格/天（{1} tick/格）</KTK_CaravanSpeedPatch_MinTicksPerMove>
+    <KTK_CaravanSpeedPatch_MinTicksPerMove_Tooltip>限制远行队最快不超过此速度（1 tick/格 即 60000 格/天，为原版引擎上限）。本 Mod 已内置寻路保护，即使设为 1 也不会出现蚊香步或无法规划路线。</KTK_CaravanSpeedPatch_MinTicksPerMove_Tooltip>
     <KTK_CaravanSpeedPatch_ResetToDefault>重置设置</KTK_CaravanSpeedPatch_ResetToDefault>
 
     <!-- Patch -->

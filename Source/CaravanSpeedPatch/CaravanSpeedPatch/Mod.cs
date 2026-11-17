@@ -93,8 +93,12 @@ namespace KTK_CaravanSpeedPatch
                     l.CheckboxLabeled("KTK_CaravanSpeedPatch_EnableVehicleFrameworkModCaravanSpeed".Translate(), ref enableVehicleFrameworkModCaravanSpeed);
                 }
                 l.GapLine();
-                DoSliderLabeled(l, "KTK_CaravanSpeedPatch_CaravanSpeedMultiplier".Translate() + "  " + caravanSpeedMultiplier.ToString("F1"), ref caravanSpeedMultiplier, 0.1f, 5.0f, "KTK_CaravanSpeedPatch_CaravanSpeedMultiplier_Tooltip".Translate(), 0.1f);
-                DoIntSliderLabeled(l, "KTK_CaravanSpeedPatch_MinTicksPerMove".Translate() + "  " + minTicksPerMove, ref minTicksPerMove, 1, 100, "KTK_CaravanSpeedPatch_MinTicksPerMove_Tooltip".Translate());
+                float speedMult = 1f / Mathf.Max(caravanSpeedMultiplier, 0.01f);
+                string speedPercent = (speedMult * 100f).ToString("F0") + "%";
+                string speedTimes = speedMult.ToString("0.##") + "x";
+                DoSliderLabeled(l, "KTK_CaravanSpeedPatch_CaravanSpeedMultiplier".Translate(speedPercent, speedTimes, caravanSpeedMultiplier.ToString("F1")), ref caravanSpeedMultiplier, 0.1f, 5.0f, "KTK_CaravanSpeedPatch_CaravanSpeedMultiplier_Tooltip".Translate(), 0.1f);
+                float maxTilesPerDay = 60000f / Mathf.Max(minTicksPerMove, 1);
+                DoIntSliderLabeled(l, "KTK_CaravanSpeedPatch_MinTicksPerMove".Translate(maxTilesPerDay.ToString("F0"), minTicksPerMove.ToString()), ref minTicksPerMove, 1, 100, "KTK_CaravanSpeedPatch_MinTicksPerMove_Tooltip".Translate());
                 l.GapLine();
 
                 if (l.ButtonText("KTK_CaravanSpeedPatch_ResetToDefault".Translate()))

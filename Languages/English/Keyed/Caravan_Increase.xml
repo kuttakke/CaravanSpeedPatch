@@ -7,10 +7,10 @@
     <KTK_CaravanSpeedPatch_EnableAnimeSpeed>Enable Animal Speed Adjustment</KTK_CaravanSpeedPatch_EnableAnimeSpeed>
     <KTK_CaravanSpeedPatch_OnlyPatchRideableAnimals>Only Include Rideable Animals</KTK_CaravanSpeedPatch_OnlyPatchRideableAnimals>
     <KTK_CaravanSpeedPatch_EnableVehicleFrameworkModCaravanSpeed>Enable Vehicle Mod Caravan Speed Support</KTK_CaravanSpeedPatch_EnableVehicleFrameworkModCaravanSpeed>
-    <KTK_CaravanSpeedPatch_CaravanSpeedMultiplier>Speed Scaling Factor (Lower = Faster)</KTK_CaravanSpeedPatch_CaravanSpeedMultiplier>
-    <KTK_CaravanSpeedPatch_CaravanSpeedMultiplier_Tooltip>Multiplies the speed bonus. Lower values mean faster travel. For example: 0.5 = double speed, 2.0 = half. If there is no original boost, this has no effect.</KTK_CaravanSpeedPatch_CaravanSpeedMultiplier_Tooltip>
-    <KTK_CaravanSpeedPatch_MinTicksPerMove>Minimum Ticks Per Move</KTK_CaravanSpeedPatch_MinTicksPerMove>
-    <KTK_CaravanSpeedPatch_MinTicksPerMove_Tooltip>Prevents pathfinding issues at very high speeds. Caravan speed will not reduce ticks per move below this value. Increase if caravans walk in spirals.</KTK_CaravanSpeedPatch_MinTicksPerMove_Tooltip>
+    <KTK_CaravanSpeedPatch_CaravanSpeedMultiplier>Caravan Speed Multiplier: {0} ({1}, factor {2})</KTK_CaravanSpeedPatch_CaravanSpeedMultiplier>
+    <KTK_CaravanSpeedPatch_CaravanSpeedMultiplier_Tooltip>Scales the caravan speed bonus (left = faster, right = slower). Examples: 0.5 = 200% (2x speed), 1.0 = 100% (unchanged), 2.0 = 50% (halved). Has no effect if there is no base speed bonus.</KTK_CaravanSpeedPatch_CaravanSpeedMultiplier_Tooltip>
+    <KTK_CaravanSpeedPatch_MinTicksPerMove>Max Speed Cap: {0} tiles/day ({1} ticks/tile)</KTK_CaravanSpeedPatch_MinTicksPerMove>
+    <KTK_CaravanSpeedPatch_MinTicksPerMove_Tooltip>Caps maximum caravan speed (1 tick/tile = 60000 tiles/day, the vanilla engine limit). Pathfinding is protected by this mod, so even 1 tick/tile will not cause spiral walking or routing failures.</KTK_CaravanSpeedPatch_MinTicksPerMove_Tooltip>
     <KTK_CaravanSpeedPatch_ResetToDefault>Reset to Default</KTK_CaravanSpeedPatch_ResetToDefault>
 
     <!-- Patch -->
